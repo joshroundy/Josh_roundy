@@ -26,6 +26,7 @@ button {
 
 .container {
     padding: 50px 0;
+    width: 100%;
 }
 
 .row {
@@ -60,6 +61,37 @@ body {
 
 .blue {
     color: rgb(23, 165, 213)
+}
+
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--white::after {
+    background-color: #fff;
+}
+
+.link__hover-effect--black::after {
+    background-color: #242424;
+}
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+ul {
+    margin-bottom: 50px;
 }
 
 
@@ -212,6 +244,12 @@ nav {
 
 .project__img {
     width: 100%;
+    transition: all 600ms ease;
+}
+
+.project:hover .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
 }
 
 .project__wrapper {
@@ -273,4 +311,40 @@ nav {
 
 .project__decription--para {
     margin: 16px 0;
+}
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+    background-color: #070606;
+    display: flex;
+    padding: 6% 0;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo--img {
+    width: 70px;
+}
+
+.footer__social--list {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px 0;
+}
+
+.footer__social--link,
+.footer__copyright {
+    color: white;
+    margin-bottom: 10px;
 }
