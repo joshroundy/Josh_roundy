@@ -1,0 +1,25 @@
+// 
+// 
+// 8xq8HmTg3t7_BWBo9
+
+function contact(event) {
+    event.preventDefault();
+    const loading = document.querySelector('.modal__overlay--loading');
+    const success = document.querySelector('.modal__overlay--success');
+    loading.classlist += " modal__overlay--visible";
+    emailjs
+        .sendForm(
+            'service_w3qntxk',
+            'template_94ikkge',
+            event.target,
+            'QkQmGwEKH0YLxaRzV'
+        ).then(() => {
+            loading.classList.remove("modal__overlay--visible");
+            success.classList += " modal__overlay--visible";
+        }).catch(() => {
+            loading.classList.remove("modal overlay--visible");
+            alert(
+                "The email service is temporarily unavailable. pleas contact me directly on joshgroundy@gmail.com"
+            );
+        })
+}
