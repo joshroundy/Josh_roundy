@@ -28,7 +28,7 @@
           <img id="personal-logo" src="assets/Personal Logo.png" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -37,7 +37,7 @@
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -89,9 +89,11 @@
           </div>
         </div>
       </header>
+      <a href="#">
       <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
+    </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -275,7 +277,7 @@
               LinkedIn
             </a>
             <a
-              href="#"
+              href="#" onclick="toggleModal()"
               class="footer__social--link 
               link__hover-effect 
               link__hover-effect--white" onclick="toggleModal()"
@@ -283,7 +285,7 @@
               Contact
             </a>
             <a
-              href="#"
+              href="/assets/Josh Roundy's resume 2023 copy.pdf" target="_blank"
               class="footer__social--link link__hover-effect 
               link__hover-effect--white"
             >
